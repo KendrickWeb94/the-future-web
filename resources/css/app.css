@@ -1,0 +1,92 @@
+@import "@fontsource/inter/index.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.smooth {
+    transition: all 800ms ease-in-out;
+}
+
+.btn-primary {
+    background: #a0d831;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: white;
+    transition: all 800ms ease-in-out;
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: #b1d767;
+}
+.btn-primary-login {
+    border: 1px solid #a0d831;
+    background: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #a0d831;
+    transition: all 800ms ease-in-out;
+    border-radius: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+.btn-link.text-active {
+    color: white;
+}
+.btn-primary-login:hover {
+    background: #a0d831;
+    color: white;
+}
+
+.btn-link {
+    color: #a0d831;
+    transition: all 800ms ease-in-out;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.active {
+    position: fixed;
+    z-index: 9999;
+    background-color: rgb(160 216 49 / 0.55);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    top: 0;
+}
+
+.tw-container {
+    max-width: 91%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+.accordion-content {
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+/*
+@media (min-width: 320px) {
+    .grid-cat {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .grid-cat {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+} */
