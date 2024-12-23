@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/index.php", // Entry point for serverless function
-        "use": "@vercel/php" // Use the Vercel PHP builder
+        "src": "api/index.php",
+        "use": "@vercel/php"
       }
     ],
     "routes": [
       {
-        "src": "/(.*)", // Catch all routes
-        "dest": "api/index.php" // Route all requests to the serverless function
+        "src": "/(.*)",
+        "dest": "api/index.php" 
       }
     ],
       "functions": {
