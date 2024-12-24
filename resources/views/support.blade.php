@@ -2,7 +2,9 @@
 
 @section('content')
 <div>
+    <x-navbar />
     <h1>Welcome to The Future</h1>
     <p>This is the customer support for guests.</p>
+    <x-footer />
 </div>
 @endsection

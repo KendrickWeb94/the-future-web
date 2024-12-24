@@ -74,6 +74,36 @@
     transition: max-height 0.3s ease-out, padding 0.3s ease;
 }
 
+button {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+
+.grid-cat-3 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 280px;
+    }
+  }
+
+  .back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .show {
+    opacity: 1;
+    visibility: visible;
+  }
 /*
 @media (min-width: 320px) {
     .grid-cat {

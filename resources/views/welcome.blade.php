@@ -1,7 +1,17 @@
 @extends('layouts.guest') <!-- Extends guest.blade.php -->
-
 @section('content')
 <div>
+    <div class="w-full py-1 px-4 bg-primary">
+        <div class="flex items-center sm:flex-nowrap flex-wrap ds:justify-start sm:justify-center gap-3">
+            <button
+                class="ds:hidden bs:flex items-center justify-center bs:text-sm bg-gray-500/20 py-1 rounded-md px-3 text-white">New</button>
+            <p class="bs:text-sm text-xs font-inter text-white">🌟️ Get unlimited access to updates from us weekly </p>
+            <a href="{{ route('register') }}"
+                class="text-white text-xs bs:text-sm font-medium hover:underline underline-offset-4">Register now</a>
+        </div>
+    </div>
+
+    <x-navbar />
     <section class="hero h-auto bg-primary/15 pt-10">
         <div class="tw-container">
             <div class="w-full flex  lg:flex-nowrap flex-wrap justify-between gap-10">
@@ -340,15 +350,15 @@
             <div class="p-6">
                 <div class="space-y-6">
                     <h1 class="font-semibold">Mobile Banking</h1>
-                    <h2 class=" ds:text-4xl md:text-5xl w-full md:max-w-2xl font-semibold">
-                        Mobile banking at a whole new level
+                    <h2 class=" ds:text-3xl md:text-4xl w-full md:max-w-lg font-inter text-balance font-semibold">
+                     Experience   mobile banking at a whole new level
                     </h2>
                     <p class="font-medium text-sm w-full md:max-w-xl text-body_text">We integrated expense tracking and
                         mobile
                         banking
                         , so that way you get to keep track of your spending , without having to put down anything in
                         data ,just track as you spend</p>
-                    <div class=" grid grid-cols-2 sm:grid-cols-2 gap-4">
+                    <div class=" grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex items-center gap-4">
                             <button class="rounded-full bg-primary/30 text-primary p-1">
                                 <img src="{{ asset('assets/icons/check.svg') }}" alt="">
@@ -377,24 +387,186 @@
                             </p>
                         </div>
                     </div>
+                    <div class="flex sm:items-center flex-wrap gap-3">
+                        <a href="#">
+                            <img src="{{ asset('assets/temp/google-play.png') }}" class="object-cover" width="120"
+                                alt="">
+                        </a>
+                        <a href="#">
+                            <img src="{{ asset('assets/temp/apple-store.png') }}" class="object-cover" height="80"
+                                width="120" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <img src="{{ asset('assets/icons/app.svg') }}" width="288" class=" translate-y-4" alt="phone-app">
+            <img src="{{ asset('assets/icons/app.svg') }}" width="288" class=" translate-y-7" alt="phone-app">
         </div>
     </section>
+    <br><br>
     <main class="w-full tw-container pb-24">
         <div class="w-full flex justify-between gap-5 flex-wrap">
-            <div class="space-y-5 md:w-[50%]">
-            <h2 class="text-5xl max-w-sm font-semibold">
+            <div class="space-y-5 md:w-[40%]">
+                <h2 class="text-5xl max-w-sm font-semibold">
                     Need help?
                 </h2>
-                <div class="flex mb-3"></div>
-            </div>
-            <div class="md:w-[50%]">
+                <br>
+                <div class="flex my-3 items-center gap-4">
+                    <button class=" bg-primary/20 text-primary rounded-full p-1 w-9 h-9 ">
+                        <i class="bx bxs-phone text-xl"></i>
+                    </button>
+                    <div class="">
+                        <h2 class="text-body_text  font-inter font-semibold">
+                            +234 902 524 1052
+                        </h2>
+                        <p class="text-text_light font-medium">Support Hotline</p>
+                    </div>
 
+                </div>
+                <div class="flex mt-5 items-center gap-4">
+                    <button class=" bg-primary/20 text-primary rounded-full p-1 w-9 h-9 ">
+                        <i class="bx bxs-phone text-xl"></i>
+                    </button>
+                    <div class="">
+                        <h2 class="text-body_text  font-inter font-semibold">
+                            the-future-support@gmail.com
+                        </h2>
+                        <p class="text-text_light font-medium">Support email</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="md:w-[50%] w-full">
+                <div class="h-1 w-full mx-auto  my-5"></div>
+
+                <!-- What is term -->
+                <div class="transition hover:bg-primary/15 pb-3 border-b border-gray-300">
+                    <!-- header -->
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="bx bx-plus"></i>
+                        <h3 class="text-body_text font-semibold font-inter">What services do you offer?</h3>
+                    </div>
+                    <!-- Content -->
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6   font-inter font-normal text-text_normal pl-9 text-justify py-5">
+                            Our app offers a wide range of services, including mobile banking, crypto, flight booking,
+                            ecommerce, and a social media like feeling.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- When to use Accordion Components -->
+                <div class="transition hover:bg-primary/15 pb-3 border-b border-gray-300">
+                    <!-- header -->
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="bx bx-plus"></i>
+                        <h3 class="text-body_text font-semibold font-inter">How do you get your own virtual card?</h3>
+                    </div>
+                    <!-- Content -->
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6  font-inter font-normal text-text_normal pl-9 text-justify py-5">
+                            simple , and no stress, it comes when you open an account , so you dont have to do anything
+                            else to have it.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Accordion Wrapper -->
+                <div class="transition hover:bg-primary/15 pb-3 border-b border-gray-300">
+                    <!-- header -->
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="bx bx-plus"></i>
+                        <h3 class="text-body_text font-semibold font-inter">How do i change my bank account limits?</h3>
+                    </div>
+                    <!-- Content -->
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6  font-inter font-normal text-text_normal pl-9 text-justify py-5">
+                            you can simply go to your like the gear icon at the top of the app , this takes you to the
+                            settings page, navigate to account limit , and change it
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Accordion Wrapper -->
+                <div class="transition hover:bg-primary/15 pb-3 border-b border-gray-300">
+                    <!-- header -->
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                        <i class="bx bx-plus"></i>
+                        <h3 class="text-body_text font-semibold font-inter"> Can i have two accounts?</h3>
+                    </div>
+                    <!-- Content -->
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                        <p class="leading-6  font-inter font-normal text-text_normal pl-9 text-justify py-5">
+                            yes you can but we strongly advise against this, as it may interfere with a lot of things.
+                        </p>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+
+
+</div>
+</div>
+</div>
+</div>
+<section class="blog-section w-full tw-container py-24">
+    <div class="w-full grid-cat-3">
+        <div class="space-y-5">
+            <img src="{{ asset('assets/temp/blog-1.png') }}" class="rounded-md" alt="">
+            <div class="space-y-4">
+                <h1 class="font-semibold text-body_text text-lg">How to use The-future for your start up</h1>
+                <p class="text-text_normal ">
+                    Sadly this feature hasnt been made yet, we havent spread to a business module yet , but we would
+                    keep you updated , because we are currently working on it
+                </p>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="w-fit rounded-md py-1 px-3 text-sm font-medium bg-gray-300/35 text-heading_text">Product</button>
+                    <button
+                        class="w-fit rounded-md py-1 px-3 text-sm font-medium bg-gray-300/35 text-heading_text">Business</button>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-5">
+            <img src="{{ asset('assets/temp/blog-2.png') }}" class="rounded-md" alt="">
+            <div class="space-y-4">
+                <h1 class="font-semibold text-body_text text-lg">How we were able to set up "The-future"</h1>
+                <p class="text-text_normal ">
+                    clearly it's a lot ,but it was all based on resiliance and believing that we could do something that
+                    would serve a lot of people and make them comfortable through software
+                </p>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="w-fit rounded-md py-1 px-3 text-sm font-medium bg-gray-300/35 text-heading_text">Product</button>
+                    <button
+                        class="w-fit rounded-md py-1 px-3 text-sm font-medium bg-gray-300/35 text-heading_text">Company</button>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-5">
+            <img src="{{ asset('assets/temp/blog-3.png') }}" class="rounded-md" alt="">
+            <div class="space-y-4">
+                <h1 class="font-semibold text-body_text text-lg">improve your savings using our app </h1>
+                <p class="text-text_normal ">
+                    you can use the budget tracker feature on our app, to track your spending habits and savings, all
+                    you need to do is fill in your budget and things you spend on
+                </p>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="w-fit rounded-md py-1 px-3 text-sm font-medium bg-gray-300/35 text-heading_text">Lifestyle</button>
+                    <button
+                        class="w-fit rounded-md py-1 px-3 text-sm font-medium bg-gray-300/35 text-heading_text">Personal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<x-to-top />
+<x-footer />
+</main>
 </div>
 @endsection
 

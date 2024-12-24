@@ -19,14 +19,34 @@ accordionHeader.forEach((header) => {
             accordionContent.style.maxHeight = `${
                 accordionContent.scrollHeight + 32
             }px`;
-            header.querySelector(".fas").classList.remove("fa-plus");
-            header.querySelector(".fas").classList.add("fa-minus");
+            header.querySelector(".bx").classList.remove("bx-plus");
+            header.querySelector(".bx").classList.add("bx-minus");
 
         } else {
             accordionContent.style.maxHeight = `0px`;
-            header.querySelector(".fas").classList.add("fa-plus");
-            header.querySelector(".fas").classList.remove("fa-minus");
+            header.querySelector(".bx").classList.add("bx-plus");
+            header.querySelector(".bx").classList.remove("bx-minus");
 
         }
     });
+});
+
+const backToTopLink = document.querySelector('a[href="#top"]');
+
+backToTopLink.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default jump
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scrolling
+  });
+});
+
+window.addEventListener("scroll", () => {
+  const backToTopLink = document.querySelector('a[href="#top"]');
+  if (window.scrollY > 300) {
+    // Show after scrolling 300px
+    backToTopLink.classList.add("show");
+  } else {
+    backToTopLink.classList.remove("show");
+  }
 });
